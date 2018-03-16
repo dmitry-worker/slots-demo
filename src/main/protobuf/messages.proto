@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.dv.slots.bus;
+
+enum SlotsMessageType {
+	UNKNOWN = 0;
+	CONNECT = 1;
+	DISCONN = 2;
+	SPIN_WH = 3;
+	ENTER_G = 4;
+	LEAVE_G = 5;
+}
+
+message SlotsMessage {
+  SlotsMessageType type = 1;
+  int32 id              = 2;
+  int32 bet             = 3;
+  string name           = 4;
+}
